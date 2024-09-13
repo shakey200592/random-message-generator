@@ -83,13 +83,16 @@ const mixedMessages = {
     ],
   },
 
+  _getRandomElement(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  },
+
   get randomMessageCategoryAndMessage() {
-    const keys = Object.keys(this._messages);
-    const randomCategory = keys[Math.floor(Math.random() * keys.length)];
-    const randomMessage =
-      this._messages[randomCategory][
-        Math.floor(Math.random() * this._messages[randomCategory].length)
-      ];
+    const categories = Object.keys(this._messages);
+    const randomCategory = this._getRandomElement(categories);
+    const randomMessage = this._getRandomElement(
+      this._messages[randomCategory]
+    );
     return `Category: ${randomCategory}\nMessage: ${randomMessage}`;
   },
 };
