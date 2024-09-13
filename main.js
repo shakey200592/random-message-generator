@@ -90,7 +90,7 @@ const mixedMessages = {
       this._messages[randomCategory][
         Math.floor(Math.random() * this._messages[randomCategory].length)
       ];
-    return `Category: ${randomCategory}\nMessages: ${randomMessage}`;
+    return `Category: ${randomCategory}\nMessage: ${randomMessage}`;
   },
 };
 
