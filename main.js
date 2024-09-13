@@ -83,3 +83,12 @@ const mixedMessages = {
 // funtion to get random index between 0 and (array length - 1)
 // Example: randomNumber([1,2,3]) returns value between 0 and 2
 const randomNumber = (arr) => Math.floor(Math.random() * arr.length);
+const categories = Object.keys(mixedMessages);
+
+const getRandomMessageCategoryAndMessage = (messageObj, CategoryList) => {
+  const category = CategoryList[randomNumber(CategoryList)];
+  const message = messageObj[category][randomNumber(messageObj[category])];
+  return `Random Message Generator:\nCategory: ${category}\nMessage: ${message}`;
+};
+
+console.log(getRandomMessageCategoryAndMessage(mixedMessages, categories));
