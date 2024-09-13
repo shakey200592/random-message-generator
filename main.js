@@ -79,3 +79,7 @@ const mixedMessages = {
     "If you could relive one day in your life, which day would it be?",
   ],
 };
+
+// funtion to get random index between 0 and (array length - 1)
+// Example: randomNumber([1,2,3]) returns value between 0 and 2
+const randomNumber = (arr) => Math.floor(Math.random() * arr.length);
